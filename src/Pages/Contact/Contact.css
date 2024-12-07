@@ -1,0 +1,152 @@
+.contactContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+.contactHeadM{
+    font-size: 2.8rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #095e36, rgb(28, 204, 19), #c4a117);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contactContainer h1{
+    padding: 20px 0;
+}
+
+.contact {
+    width: 80%;
+    border: 3px solid grey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.contactLeft {
+    width: 45%;
+    display: flex;
+}
+
+.contactLeft1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.contactLeft1 img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.contactLeft2 {
+    width: 45%;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.contactRight {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contactProfile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0 0;
+}
+
+.profile0 {
+    width: 40%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactHead{
+    padding: 0 20px;
+}
+
+.form1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input1 input {
+    width: 100%;
+    border: 1px solid #565656;
+    border-radius: 5px;
+    color: hsl(0, 0%, 30%);
+    padding: 5px;
+    outline: none;
+    background: transparent;
+}
+
+.banking{
+    width: 100%;
+}
+
+.banking h1{
+padding: 15px 20px;
+}
+
+.paymentBtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.saveBtn{
+    font-size: 1.3rem;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #07689F;
+    background-color: white;
+    cursor: pointer;
+    color: #07689F;
+    margin: 20px 0 0 0;
+}
+
+.paymentBtn{
+    font-size: 1.3rem;
+    font-weight: 550;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #07689F;
+    cursor: pointer;
+    color: white;
+    margin: 20px 0 0 0;
+}

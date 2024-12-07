@@ -1,0 +1,129 @@
+.admin{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 0 0 0;
+}
+
+.admin button{
+    font-weight: bold;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.adminForm{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.adminForm input{
+    width: 60%;
+    font-size: 18px;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #565656;
+    border-radius: 10px;
+    background: transparent;
+    color: grey;
+}
+
+.adminBtns{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.adminFetch{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.hotelName{
+    width: 150%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    border: 1px solid ;
+    padding: 30px 50px  ;
+    border-radius: 10px;
+}
+
+.hotelName p{
+    font-size: 18px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.adminFetch input{
+    font-size: 18px;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+
+.hotelsCard{
+    width: 125%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+    border: 2px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.addBtn{
+    border: none;
+    background-color: #07689F;
+    color: white;
+    font-size: 15px;
+}
+.addData{
+    border: none;
+    background-color: hsl(143, 92%, 22%);
+    color: white;
+    font-size: 15px;
+}
+
+.deleteBtn{
+    border: none;
+    background-color: hsl(0, 100%, 65%);
+    color: white;
+    font-size: 15px;
+}
+
+.fetchHotel{
+    border: 2px solid grey;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    color: grey;
+}
+
+.fetchBtn{
+    border: none;
+    background-color: hsl(143, 92%, 22%);
+    color: white;
+    font-size: 15px;
+}
+
+.deleteCard{
+    border: none;
+    background-color: hsl(0, 100%, 55%);
+    color: white;
+    font-size: 15px;
+}

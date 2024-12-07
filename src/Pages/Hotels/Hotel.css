@@ -1,0 +1,99 @@
+.hotel{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hotelLeft{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    display: none;
+
+}
+
+.hotelRight{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hotelCard{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.hotelCardLeft{
+    width: 40%;
+}
+
+.hotelCardLeft img{
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+}
+
+.hotelCardRight{
+    width: 58%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hotelContent1{
+    width: 50%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hotelContent2{
+    width: 35%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 0 0 30px 0;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pagination button{
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+}
+
+.pagination button{
+    background-color: #07689F;
+    color: white;
+    cursor: pointer;
+}

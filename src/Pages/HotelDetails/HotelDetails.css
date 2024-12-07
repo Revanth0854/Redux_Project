@@ -1,0 +1,121 @@
+.detailsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+.detailsContent {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    border: 2px solid #D9D9D9;
+    border-radius: 10px;
+    padding: 50px 0;
+    /* background-color: white; */
+}
+
+.detailsImages {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subImage1 {
+    width: 55%;
+}
+
+.subImage1 img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.subImage2 {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.subImage2 img {
+    width: 100%;
+    height: 23vh;
+    border-radius: 10px;
+
+}
+
+.hotelDetails {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.hotelDetailsLeft {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detailsPrice {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.raja {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff7e5f, red, #8d4f20);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hotelDetailsRight {
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 0 10px 0;
+}
+
+.detailsPrice {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+span {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.bookBtn {
+    font-size: 1.3rem;
+    font-weight: 550;
+    align-self: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #07689F;
+    cursor: pointer;
+    color: white;
+    margin: 20px 0 0 0;
+}
