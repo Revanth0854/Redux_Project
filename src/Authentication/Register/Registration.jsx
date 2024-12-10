@@ -75,7 +75,6 @@ const Registration = () => {
     try {
 
       await axios.post('https://redux-server-w0s1.onrender.com/users', formData);
-      await axios.post('http://localhost:3000/users', formData);
       toast.success("Registration successful!");
       setFormData({
         name: "",
