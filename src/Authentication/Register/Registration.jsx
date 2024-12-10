@@ -74,7 +74,8 @@ const Registration = () => {
 
     try {
 
-      const response = await axios.post('http://localhost:3000/users', formData);
+      await axios.post('https://redux-server-w0s1.onrender.com/users', formData);
+      await axios.post('http://localhost:3000/users', formData);
       toast.success("Registration successful!");
       setFormData({
         name: "",
@@ -84,7 +85,7 @@ const Registration = () => {
       });
       setTimeout(() => {
         navigate('/login');
-      }, 1000)
+      }, 3000)
     }
     catch (error) {
       console.error(error);
@@ -98,7 +99,7 @@ const Registration = () => {
   return (
     <>
       <div className='register'>
-        <ToastContainer position='top-right' autoClose={1000} hideProgressBar />
+        <ToastContainer position='top-center' autoClose={1000} hideProgressBar />
 
         <div className="registerRight">
           <h1>Register</h1>
