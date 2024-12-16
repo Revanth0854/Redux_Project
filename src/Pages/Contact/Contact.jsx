@@ -15,11 +15,13 @@ import { MdSportsHandball } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { CiHeart } from "react-icons/ci";
+import { useSelector } from 'react-redux'
 
 
 
 const Contact = () => {
     const location = useLocation()
+    const user = useSelector(state => state.register.login)
 
     const [data] = [location.state]
 
@@ -85,7 +87,7 @@ const Contact = () => {
                                 <a href="#"><CgProfile style={{ fontSize: "30px", color: "black" }} /></a>
                                 <div className="details">
                                     <h3 style={{ color: "#043E5F" }}>Your Account</h3>
-                                    <p style={{ color: "#07689F" }}>Revanth</p>
+                                    <p style={{ color: "#07689F" }}>{user.name}</p>
                                 </div>
                             </div>
 

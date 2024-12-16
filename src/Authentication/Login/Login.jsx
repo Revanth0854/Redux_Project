@@ -1,13 +1,17 @@
 
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import React, { createContext, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
+import { setLogin } from '../../Redux/Slices/registerSlice'
 import { ToastContainer, toast } from 'react-toastify'
-
+export const User = createContext()
 const Login = () => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const data = useSelector(state => state.register.data)
+
   const users = data.users
+  console.log(users)
   const admin = data.admin
 
   const [log, setLog] = useState({
@@ -41,6 +45,7 @@ const Login = () => {
 
     if (find) {
       toast.success("Logged in Successfully")
+      dispatch(setLogin(find))
       setTimeout(() => {
         navigate('/home')
       }, 1000)

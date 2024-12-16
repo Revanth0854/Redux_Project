@@ -10,12 +10,16 @@ import { CgProfile } from "react-icons/cg";
 import { useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { dark } from '../../Redux/Slices/registerSlice';
+import { dark, logout } from '../../Redux/Slices/registerSlice';
 
 
 const Navbar = () => {
 
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const userData = useSelector(state => state.register.login)
+    console.log(userData)
 
     const data = useSelector(state => state.register.theme)
 
@@ -23,10 +27,10 @@ const Navbar = () => {
 
     const handleLogout = (e) => {
         e.preventDefault()
+        dispatch(logout())
         navigate("/login")
     }
 
-    const dispatch = useDispatch()
     const handleDark = (e) => {
         dispatch(dark())
     }
@@ -42,19 +46,28 @@ const Navbar = () => {
                 </div>
                 <div className="navlinks">
                     <a href="#"><img src={flag} alt="" style={{ width: "28px" }} /></a>
-                    <a href="#"><FaIndianRupeeSign style={{ fontSize: "30px",color:data ? "white":"black" }} /></a>
-                    <a href="#"><FaRegCircleQuestion style={{ fontSize: "30px",color:data ? "white":"black"  }} /></a>
-                    <a href="#"><FaRegHeart style={{ fontSize: "30px",color:data ? "white":"black"  }} /></a>
-                    <a href="#"><LuPhoneCall style={{ fontSize: "30px",color:data ? "white":"black"  }} /></a>
+                    <a href="#"><FaIndianRupeeSign style={{ fontSize: "30px", color: data ? "white" : "black" }} /></a>
+                    <a href="#"><FaRegCircleQuestion style={{ fontSize: "30px", color: data ? "white" : "black" }} /></a>
+                    <a href="#"><FaRegHeart style={{ fontSize: "30px", color: data ? "white" : "black" }} /></a>
+                    <a href="#"><LuPhoneCall style={{ fontSize: "30px", color: data ? "white" : "black" }} /></a>
 
                 </div>
                 <button onClick={handleDark} className={data ? "darkMode" : "lightMode"}>{data ? "Dark" : "Light"}</button>
 
                 <div className="profile">
-                    <a href="#"><CgProfile style={{ fontSize: "30px",color:data ? "white":"black"  }} /></a>
+                    <a href="#"><CgProfile style={{ fontSize: "30px", color: data ? "white" : "black" }} /></a>
                     <div className="details">
                         <h3 style={{ color: "#043E5F" }}>Your Account</h3>
-                        <p style={{ color: "#07689F" }}>Revanth</p>
+                        {
+                            userData ?
+                                (
+                                    <p style={{ color: "#07689F" }}>{userData?.name}</p>
+                                )
+                                :
+                                (
+                                    <h2>Login</h2>
+                                )
+                        }
                     </div>
                     <button className='logout' onClick={handleLogout}>Logout</button>
 

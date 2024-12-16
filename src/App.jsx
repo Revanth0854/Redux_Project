@@ -9,7 +9,7 @@ import Contact from './Pages/Contact/Contact'
 import { ToastContainer } from 'react-toastify';
 import Admin from './Pages/Admin/Admin'
 import { useSelector } from 'react-redux'
-// import { dark } from './Redux/Slices/registerSlice'
+
 
 function App() {
 

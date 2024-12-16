@@ -1,15 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
-import data from "../../../../reduxServer/data.json"
+// import data from "../../../../reduxServer/data.json"
+import axios from 'axios' 
+const getData = axios.get("https://redux-server-w0s1.onrender.com")
+
 
 const initialState = {
-    data: data,
-    theme: false
+    data: getData,
+    theme: false,
+    login: null
 }
-
-
-
-
-
 
 const slice = createSlice({
     name: "register",
@@ -18,8 +17,14 @@ const slice = createSlice({
         registerData: (state, action) => {
             state.data.users = [...state.data.users, action.payload]
         },
-        dark: (state,action)=>{
+        dark: (state)=>{
             state.theme = !state.theme
+        },
+        setLogin:(state,action)=>{
+            state.login = action.payload
+        },
+        logout:(state)=>{
+            state.login = null
         }
     }
 })
@@ -27,4 +32,4 @@ const slice = createSlice({
 
 
 export default slice.reducer
-export const { registerData, dark } = slice.actions
+export const { registerData, dark, setLogin, logout } = slice.actions
