@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
-// import data from "../../../../reduxServer/data.json"
-import axios from 'axios' 
-const getData = axios.get("https://redux-server-w0s1.onrender.com")
+import data from "../../../../reduxServer/data.json"
+// import axios from 'axios' 
+// const getData = axios.get("https://redux-server-w0s1.onrender.com")
 
 
 const initialState = {
-    data: getData,
+    data: data,
     theme: false,
     login: null
 }

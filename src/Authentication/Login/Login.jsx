@@ -9,9 +9,9 @@ const Login = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const data = useSelector(state => state.register.data)
-
+  console.log(data)
   const users = data.users
-  console.log(users)
+  // console.log(users)
   const admin = data.admin
 
   const [log, setLog] = useState({
