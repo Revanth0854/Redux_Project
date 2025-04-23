@@ -2,7 +2,7 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import { fetchData } from './Redux/Slices/registerSlice';
+import { fetchData } from '../../Redux/Slices/registerSlice';
 import { setLogin } from '../../Redux/Slices/registerSlice'
 import { ToastContainer, toast } from 'react-toastify'
 export const User = createContext()
