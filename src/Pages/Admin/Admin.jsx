@@ -91,7 +91,7 @@ const Admin = () => {
             return
         }
         try {
-            await axios.post('https://redux-server-w0s1.onrender.com/hotels', admin)
+            await axios.post('http://localhost:3000/hotels', admin)
             toast.success("Posted Successfully")
         }
         catch (error) {
@@ -103,7 +103,9 @@ const Admin = () => {
 
     const handleDeleteCard = (e) => {
         e.preventDefault()
-        axios.delete(`https://redux-server-w0s1.onrender.com/hotels/${findData.id}`)
+        // window.confirm("Are you sure to Delete the hotel")
+        toast.confirm("Are you sure to Delete the hotel")
+        axios.delete(`http://localhost:3000/hotels/${findData.id}`)
 
     }
 

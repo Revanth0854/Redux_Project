@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useState } from 'react'
 import './Registration.css'
-import { registerData } from '../../Redux/Slices/registerSlice'
 import { Link } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -66,16 +64,18 @@ const Registration = () => {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    console.log(e)
+    e.preventDefault()
 
     if (!validateForm()) {
       return;
     }
 
     try {
+      e.preventDefault()
 
-      // await axios.post('https://redux-server-w0s1.onrender.com/users', formData);
-      await axios.post('http://localhost:3000/users', formData);
+      await axios.post('https://redux-server-w0s1.onrender.com/users', formData);
+      // await axios.post('http://localhost:3000/users', formData);
       toast.success("Registration successful!");
       setFormData({
         name: "",
@@ -83,9 +83,8 @@ const Registration = () => {
         password: "",
         conformPassword: ""
       });
-      setTimeout(() => {
         navigate('/login');
-      }, 1000)
+      
     }
     catch (error) {
       console.error(error);
