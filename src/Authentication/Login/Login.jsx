@@ -50,33 +50,26 @@ const Login = () => {
         navigate('/home');
       }, 1000);
     } else {
-      toast.error("Invalid Details");
+      const adminRes = await axios.get(`https://redux-server-w0s1.onrender.com/admin?email=${log.email}&password=${log.password}`);
+        const admin = adminRes.data[0];
+
+        if (admin) {
+          toast.success("Welcome Admin");
+          dispatch(setLogin(admin)); 
+
+          setTimeout(() => {
+            navigate('/admin'); 
+          }, 1000);
+        } else {
+          toast.error("Invalid login details");
+        }
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Login failed. Please try again.");
     }
-  } catch (err) {
-    console.error(err);
-    toast.error("Login failed. Please try again.");
   }
-    // const find = users.find(item => item.password === log.password && item.email === log.email)
-
-    // const findAdmin = admin.find(item => item.email === log.email && item.password === log.password)
-
-    // if (find) {
-    //   toast.success("Logged in Successfully")
-    //   dispatch(setLogin(find))
-    //   setTimeout(() => {
-    //     navigate('/home')
-    //   }, 1000)
-    // }
-    // else if (findAdmin) {
-    //   toast.success("Welcome Admin")
-    //   setTimeout(() => {
-    //     navigate('/admin')
-    //   }, 1000)
-    // }
-    // else {
-    //   toast.error("Invalid Details")
-    //   alert("Email: revanth@gmail.com  Password: 123456")
-    // }
+  
   }
 useEffect(()=>{
   dispatch(fetchData())
